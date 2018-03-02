@@ -1,2 +1,1 @@
-# Iniciando-Python
-Atividades e tutoriais em python
+# Tutorial para iniciantes em Python OO.
