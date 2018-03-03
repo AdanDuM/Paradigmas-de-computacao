@@ -49,7 +49,7 @@ Construtor é responsável por criar o objeto quando instanciado, o construtor r
 ```
 class Pessoa:
 
-def __init__ (self, nome, idade):
+  def __init__ (self, nome, idade):
 		self.nome = nome
 		self.idade = idade
 ```
@@ -57,12 +57,12 @@ O construtor é interpretado pela chamada de método def seguida pela chamada __
 ```
 class Pessoa:
 
-def __init__ (self, nome, idade):
-		self.nome = nome
+  def __init__ (self, nome, idade):
+    self.nome = nome
 		self.idade = idade
 
-def imprimi_dados(self):
-		print(“Nome: {1} idade {2}”, [self.nome, self.idade])
+    def imprimi_dados(self):
+		  print(“Nome: {1} idade {2}”.format(self.nome, self.idade))
 ```
 Como bem sabemos, o def declara um método que nesse caso imprime os dados, self faz referência ao próprio objeto sendo possível imprimir os dados na ordem.
 
@@ -71,27 +71,65 @@ Temos a classe pronta, então precisamos usá-la, mas como podemos instanciar es
 ```
 class Pessoa:
 
-def __init__ (self, nome, idade):
+  def __init__ (self, nome, idade):
 		self.nome = nome
 		self.idade = idade
 
-def imprimi_dados(self):
-		print(“Nome: {1} idade {2}”, [self.nome, self.idade])
+  def imprimi_dados(self):
+    print(“Nome: {1} idade {2}”, [self.nome, self.idade])
 
 pessoa = Pessoa() 			# instanciando a classe
-pessoa.imprmi_dados()  		# Chamando métodos
+pessoa.imprmir_dados()  	# Chamando métodos
 ```
 Instanciar é a parte simples, em seguida podemos chamar seus métodos colocando um ponto e nome do método.
 
 ## Herança (simples e múltipla) e polimorfismo
 
-Foram atendidos mais de 20 alunos, que retornaram a tirar dúvidas.
-Poucas dúvidas, e quando existia foram tiradas com o professor e
-esclarecida para o aluno.
-Notado grande dificuldade na parte de lógica, equação modular, provas e
-reticulados.
-Antes da primeira prova foi feito um grupo de estudo no horário da noite, tirando dúvidas e preparando alunos para prova.
-Ótima experiência para qualquer um.
-Agradecimento ao Professor.
+Para definir que a super classe em uma classe.
 
-Obrigado
+```
+class Pessoa:
+  atributo1
+
+class Aluno(Pessoa):
+  atributo2
+```
+Dessa forma entendemos que Pessoa é super classe de aluno e que alem de aluno possuir o atributo2,
+ele tambem possui o atributo1 da sua super classe.
+Quando apresentamos mais de uma super classe temos o que chamamos de herança multipla.
+
+## Métodos abstratos e estáticos.
+
+Metodos abstratos devem ser declarados com a anotação **@abstractmethod**, a classe que herdar
+uma super classe que tem metodos abstratos, deve sobreescrever o/os metodo/s.
+
+```
+class Pessoa:
+
+  @abstractmethod
+  def faz_algo(self):
+```
+
+## Atividades
+
+[A-Pneu] (http://br.spoj.com/problems/JPNEU/)
+[B1-Busca] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_busca)
+[B2-Quadrado] (http://br.spoj.com/problems/QUADRAD2/)
+[C-Papel] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_papel)
+[E-Tenis] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_tenis)
+[D-Overflow] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_overflow)
+[G-Garçom] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_garcom)
+[F-Maior] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_maior)
+[I-Sedex] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_sedex)
+[H-Tacografo] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f2pj_tacografo)
+[J-Campeonato] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_campeonato)
+[K-Envelopes] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_envelopes1)
+[L-Bolo] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_bolo)
+[M-Transporte] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2011f1pj_transporte)
+[N-Maratona] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f2pj_maratona)
+[P-Chocolate] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_chocolate)
+[O-Campo Minado] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2011f1pj_campominado)
+[Q-Vestib] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2008f1pj_vestib)
+[R-Corrida] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2011f1pj_corrida)
+[S-Chuva] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2011f2pj_chuva)
+[T-Escada] (http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f2pj_escada)
