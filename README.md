@@ -50,8 +50,8 @@ Construtor é responsável por criar o objeto quando instanciado, o construtor r
 class Pessoa:
 
   def __init__ (self, nome, idade):
-		self.nome = nome
-		self.idade = idade
+    self.nome = nome
+    self.idade = idade
 ```
 O construtor é interpretado pela chamada de método def seguida pela chamada __init__, dentro dos parentes temos os parâmetros nome e idade. O parâmetro self, refere-se a instância da própria classe e quando escrevemos self.nome estamos declarando um objeto nome dentro da classe sem precisar representar a variável em outro lugar.
 ```
@@ -59,10 +59,10 @@ class Pessoa:
 
   def __init__ (self, nome, idade):
     self.nome = nome
-		self.idade = idade
+    self.idade = idade
 
-    def imprimi_dados(self):
-		  print(“Nome: {1} idade {2}”.format(self.nome, self.idade))
+  def imprimi_dados(self):
+    print(“Nome: {1} idade {2}”.format(self.nome, self.idade))
 ```
 Como bem sabemos, o def declara um método que nesse caso imprime os dados, self faz referência ao próprio objeto sendo possível imprimir os dados na ordem.
 
@@ -72,13 +72,13 @@ Temos a classe pronta, então precisamos usá-la, mas como podemos instanciar es
 class Pessoa:
 
   def __init__ (self, nome, idade):
-		self.nome = nome
-		self.idade = idade
+    self.nome = nome
+    self.idade = idade
 
   def imprimi_dados(self):
     print(“Nome: {1} idade {2}”, [self.nome, self.idade])
 
-pessoa = Pessoa() 			# instanciando a classe
+pessoa = Pessoa()   			# instanciando a classe
 pessoa.imprmir_dados()  	# Chamando métodos
 ```
 Instanciar é a parte simples, em seguida podemos chamar seus métodos colocando um ponto e nome do método.
@@ -116,12 +116,12 @@ class Pessoa:
 * [B1-Busca](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_busca)
 * [B2-Quadrado](http://br.spoj.com/problems/QUADRAD2/)
 * [C-Papel](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_papel)
-* [E-Tenis](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_tenis)
 * [D-Overflow](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_overflow)
-* [G-Garçom](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_garcom)
+* [E-Tenis](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_tenis)
 * [F-Maior](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_maior)
-* [I-Sedex](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_sedex)
+* [G-Garçom](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_garcom)
 * [H-Tacografo](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f2pj_tacografo)
+* [I-Sedex](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_sedex)
 * [J-Campeonato](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_campeonato)
 * [K-Envelopes](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_envelopes1)
 * [L-Bolo](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_bolo)
