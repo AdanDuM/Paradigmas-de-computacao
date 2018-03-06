@@ -4,7 +4,7 @@ a = int(a)
 l = int(l)
 p = int(p)
 
-if n < a or n < l or n < p:
-    print("n")
+if(n < a and n < l and n < p):
+    print("S")
 else:
-    print("s")
+    print("N")
