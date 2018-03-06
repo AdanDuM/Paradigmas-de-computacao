@@ -117,12 +117,12 @@ class Pessoa:
 * [B2-Quadrado](http://br.spoj.com/problems/QUADRAD2/)
 * [C-Papel](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_papel)
 * [D-Overflow](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_overflow)
-* [E-Tenis](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_tenis)
+* [E-Tenis](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_tenis) --
 * [F-Maior](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_maior)
 * [G-Garçom](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_garcom)
 * [H-Tacografo](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f2pj_tacografo)
-* [I-Sedex](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_sedex)
-* [J-Campeonato](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_campeonato)
+* [I-Sedex](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_sedex) --
+* [J-Campeonato](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_campeonato) --
 * [K-Envelopes](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_envelopes1)
 * [L-Bolo](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_bolo)
 * [M-Transporte](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2011f1pj_transporte)
