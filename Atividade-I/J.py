@@ -6,16 +6,17 @@ f1 = int(f1)
 f2 = int(f2)
 f3 = int(f3)
 
-if c1 > f1:
+scoreC = c1*3 + c2
+scoreF = f1*3 + f2
+
+if scoreC > scoreF:
     print("C")
-else:
-    if f1 > c1:
+elif scoreF > scoreC:
+    print("F")
+elif scoreF == scoreC:
+    if c3 > f2:
+        print("C")
+    elif f2 > c2:
         print("F")
-    else :
-        if f1 == c1 & f3 > c3:
-            print("F")
-        else :
-            if f1 == c1 & c3 > f3:
-                print("C")
-            else:
-                print("=")
+    else:
+        print("=")
