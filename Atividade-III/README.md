@@ -6,7 +6,7 @@ A = f(x) = x
 B = f(a, b) = a + b
 C = f(x) = x-²
 D = f(x) = x ∗ x-¹
-<br />
+###
 - 2. Aplique α-convers˜ao, quando poss´ıvel, e mostre se as express˜oes abaixo s˜ao α-equivalentes. Identifique
 as vari´aveis dependentes (ou vinculadas) e livres de cada express˜ao. Diga tamb´em quais das express˜oes
 abaixo s˜ao combinadores.
