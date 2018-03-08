@@ -1,4 +1,4 @@
-# Tutorial para iniciantes em Python OO/home/ecjunior/Modelos/backend-geekmoney.
+# Tutorial para iniciantes em Python OO.
 ### Atividade 2 de paradigmas
 
 ## Introdução.
