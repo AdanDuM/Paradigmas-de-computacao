@@ -1,23 +1,41 @@
-# Atividades
 
-* [A-Pneu](http://br.spoj.com/problems/JPNEU/)
-* [B1-Busca](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_busca)
-* [B2-Quadrado](http://br.spoj.com/problems/QUADRAD2/)
-* [C-Papel](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_papel)
-* [D-Overflow](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_overflow)
-* [E-Tenis](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_tenis)
-* [F-Maior](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_maior)
-* [G-Garçom](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_garcom)
-* [H-Tacografo](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f2pj_tacografo)
-* [I-Sedex](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f1pj_sedex) --
-* [J-Campeonato](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f1pj_campeonato) --
-* [K-Envelopes](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f1pj_envelopes1)
-* [L-Bolo](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_bolo)
-* [M-Transporte](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2011f1pj_transporte)
-* [N-Maratona](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2009f2pj_maratona)
-* [O-Campo Minado](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2011f1pj_campominado)
-* [P-Chocolate](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2012f2pj_chocolate)
-* [Q-Vestib](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2008f1pj_vestib)
-* [R-Corrida](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2011f1pj_corrida)
-* [S-Chuva](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2011f2pj_chuva)
-* [T-Escada](http://olimpiada.ic.unicamp.br/pratique/programacao/nivelj/2010f2pj_escada)
+
+# Paradigmas de Programação
+## Atividades 1
+
+1. Tabela de paradigmas.
+Essa tabela mostra alguns paradigmas existentes, algumas linguagens que
+trabalham com esses paradigmas e algumas descrições.
+
+Paradigma | Linguagem | Características
+--------- | --------- | ---------
+Orientação a objetos | Java, C++, Typescript | Novos conceitos de associações entre classes, fácil manutenção.
+Funcional | Haskell, F# | Noção bem fundamentada de recursividade, Semântica simples
+Programação imperativa| C, php, Basic |Difícil legibilidade, fácil aprendizado, presente fortemente na atualidade.
+
+2. Outros paradigmas.
+Existe outros paradigmas de programação tais como:
+- Programação orientada a agentes
+  - Jason
+- Programação estruturada (Em contraste com POO)
+  - C
+- Programação restritiva (Complementa programação lógica)
+  - Prolog
+- Programação orientada a aspectos
+  - AspectJ
+  
+  
+3. Programação orientado a agentes.
+Esse termo é usado para descrever uma forma de pensar na arquitetura de software
+em que as entidades computacionais de maior interesse são chamados de "agentes".
+Uma forte característica está no fato que os agentes são entidades que tem objetivo próprio,
+dado por um projetista claro, faz com que o agente realize a tarefa da melhor forma
+possível.
+
+Muito usado na área de inteligência artificial.
+
+Exemplos de linguagens orientada a agentes.
++ CAF
++ JADE
++ JADEX
++ JASON
