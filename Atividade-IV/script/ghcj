@@ -1,0 +1,9 @@
+#!/bin/bash
+#Este shell é para nao criar arquivos tolos no diretorio
+echo "Compilando $1."
+ghc -o haskel $1
+rm *.o
+rm *.hi
+echo "Executando Programa"
+./haskel
+rm haskel
