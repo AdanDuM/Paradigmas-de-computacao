@@ -8,3 +8,7 @@
 - [Atividade-IV](https://github.com/EdisonCristovao/Iniciando-Python/tree/master/Atividade-IV)
 - [Atividade-V](https://github.com/EdisonCristovao/Iniciando-Python/tree/master/Atividade-V)
 - [Atividade-VI](https://github.com/EdisonCristovao/Iniciando-Python/tree/master/Atividade-VI)
+- [Atividade-VII](https://github.com/EdisonCristovao/Iniciando-Python/tree/master/Atividade-VII)
+- [Atividade-VIII](https://github.com/EdisonCristovao/Iniciando-Python/tree/master/Atividade-VIII)
+- [Atividade-IX](https://github.com/EdisonCristovao/Iniciando-Python/tree/master/Atividade-IX)
+- [Atividade-X](https://github.com/EdisonCristovao/Iniciando-Python/tree/master/Atividade-X)
