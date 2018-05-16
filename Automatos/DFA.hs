@@ -6,7 +6,7 @@ type Alpha = Char
 data Aut = Aut { alpha :: [Alpha],
                  states :: [State],
                  initial :: State,
-                 trans :: [(State, Alpha, State)], -- triplas list
+                 trans :: (State Alpha) State, -- triplas list
                  final :: [State] }
                  deriving(Show)
 
@@ -24,11 +24,15 @@ check a [] q = q:[]
 accept :: Aut -> [Alpha] -> Bool
 accept a xs = is_final a "q0"
 
-ret_1 :: (State, Alpha, State) -> State
-ret_1 (x, _, _) = x
+--ret_1 :: (State, Alpha, State) -> Aut -> State
+--ret_1 (x, y, _) a = lookup ("q0",'1') (trans a)
 
-ver :: [(State, Alpha, State)] -> State
-ver (x:xs) = ret_1 x
+
+ret_2 :: Aut -> State
+ret_2 a = lookup ("q0",'1') (trans a)
+
+--ver :: [(State, Alpha, State)] -> State
+--ver (x:xs) = ret_ x
 
 autA = Aut {alpha = "01",
              states = ["q0","q1"],
