@@ -1,21 +1,19 @@
-:- initialization(main).
+divisivel(N,K) :-
+    M is mod(N,K),
+    M == 0.
 
-main :- write('Informe um numero'),
-    read(X),
-    writeln(X),
-    Y is sqrt(X),
-    writeln(Y),
-    halt.
-    
-    
-gerou(carlos, maria).
-gerou(ana, maria).
-gerou(ana, gabriel).
-gerou(gui, marcos).
+/*
+?- divisivel(2,2).
+true.
 
-homen(gabriel).
-feminino(maria).
+?- divisivel(5,2).
+false.
+*/
 
-feio(edison).
-
-
+triangulo(X, Y, Z) :-
+    X < Y + Z,
+    Y < X + Z,
+    Z < X + Y,
+    X > abs(Y - Z),
+    Y > abs(X - Z),
+    Z > abs(X - Y).

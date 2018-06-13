@@ -63,11 +63,11 @@ bisavo(X, Y) :-
 bisavoh(X, Y) :-
     genitor(X, AvoY), genitor(AvoY, PaisY), genitor(PaisY, Y), mulher(X).
 
-% descendente(X, Y) :-
-%     genitor(Y, X).
-% descendente(X, Y) :-
-%     genitor(Y, Z), descendente(Z, X). 
+descendente(X, Y) :-
+    genitor(Y, X).
+descendente(X, Y) :-
+    genitor(Y, Z), descendente(X, Z). 
 
-% feliz(X) se x tem filhos
+feliz(X) :- genitor(X,_).
 
  
