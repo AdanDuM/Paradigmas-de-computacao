@@ -115,4 +115,39 @@ X = 5 .
 X = 21 .
 */
 
- distancia3D(ponto(X1,Y1,Z1),ponto(X2,Y2,Z2), Dist) :- Dist is
+ distancia3D(ponto(X1,Y1,Z1),ponto(X2,Y2,Z2), Dist) :- Dist is sqrt((X1 - X2) * (X1 - X2) + (Y1 - Y2) * (Y1 - Y2) + (Z1 - Z2) * (Z1 - Z2)).
+
+ /*
+ ?- distancia3D(ponto(2,2,2), ponto(3,3,3),Dist).
+Dist = 1.7320508075688772.
+
+?- distancia3D(ponto(2,2,2), ponto(10,3,10),Dist).
+Dist = 11.357816691600547.
+
+?- distancia3D(ponto(5,2,2), ponto(10,3,10),Dist).
+Dist = 9.486832980505138.
+
+*/
+
+maior(A, B, C, A) :- A >= B , A >= C, !.
+maior(A, B, C, B) :- B >= A , B >= C, !.
+maior(A, B, C, C) :- C >= B , C >= A, !.
+
+/*
+?- maior(2,2,2, X).
+X = 2.
+
+?- maior(2,2,4, X).
+X = 4.
+
+?- maior(2,6,4, X).
+X = 6.
+
+?- maior(10,6,4, X).
+X = 10.
+*/
+
+operacao(+, X, Y, Result) :- Result is X + Y.
+operacao(-, X, Y, Result) :- Result is X - Y.
+operacao(*, X, Y, Result) :- Result is X * Y.
+operacao(/, X, Y, Result) :- Result is X / Y.
