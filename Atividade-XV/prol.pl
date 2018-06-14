@@ -151,3 +151,19 @@ operacao(+, X, Y, Result) :- Result is X + Y.
 operacao(-, X, Y, Result) :- Result is X - Y.
 operacao(*, X, Y, Result) :- Result is X * Y.
 operacao(/, X, Y, Result) :- Result is X / Y.
+
+/*
+?- operacao(+,2,2,X).
+X = 4.
+
+?- operacao(*,2,2,X).
+X = 4.
+
+?- operacao(/,2,2,X).
+X = 1.
+*/
+
+mdc(1, _, 1) :- !.
+mdc(_, 1, 1) :- !.
+mdc(X,Y,Resultado) :- Resultado is mod(X, Y), mod(Y,Resultado) =:= 0.
+mdc(X,Y,Resultado) :- R is mod(X, Y), mdc(Y,R,Resultado).
