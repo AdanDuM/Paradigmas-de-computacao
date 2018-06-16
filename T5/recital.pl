@@ -36,7 +36,7 @@ suco(uva).
 
 %X está à ao lado de Y
 aoLado(X,Y,Lista) :- nextto(X,Y,Lista);nextto(Y,X,Lista).
-                       
+  
 %X está à esquerda de Y (em qualquer posição à esquerda)
 aEsquerda(X,Y,Lista) :- nth0(IndexX,Lista,X), 
                         nth0(IndexY,Lista,Y), 
@@ -45,12 +45,21 @@ aEsquerda(X,Y,Lista) :- nth0(IndexX,Lista,X),
 %X está à direita de Y (em qualquer posição à direita)
 aDireita(X,Y,Lista) :- aEsquerda(Y,X,Lista). 
 
+% X esta entre Y e Z.
+noMeio(X,Y,Z,Lista) :- aEsquerda(X,Z,Lista), aDireita(X,Y,Lista).
+
 %X está no canto se ele é o primeiro ou o último da lista
 noCanto(X,Lista) :- last(Lista,X).
 noCanto(X,[X|_]).
 
 todosDiferentes([]).
 todosDiferentes([H|T]) :- not(member(H,T)), todosDiferentes(T).
+
+primeira(X,[X|_]).
+
+meninaPos(1, X, [X|_]).
+meninaPos(P, X, [_|T]) :- P1 is P -1, meninaPos(P1, X, T).
+
 
 solucao(ListaSolucao) :- 
 
@@ -73,8 +82,7 @@ solucao(ListaSolucao) :-
     aoLado(menina(_, _, _, 8, _, _), menina(_, _, drumond, _, _, _), ListaSolucao)), 
     
     % % Na primeira posição está a menina que recitará um poema do Guimarães Rosa.
-    (noCanto(menina(_, _, guimaraes_rosa, _,_, _), ListaSolucao),
-    aEsquerda(menina(_, _, guimaraes_rosa, _, _, _), menina(_, _, _, _, _, _), ListaSolucao)),
+    primeira(menina(_, _, guimaraes_rosa, _,_, _), ListaSolucao),
 
     % % A menina do vestido Verde tem 9 anos.
     member(menina(verde, _, _, 9, _, _), ListaSolucao),
@@ -87,12 +95,10 @@ solucao(ListaSolucao) :-
     aDireita(menina(_, marcia, _, _, _, _), menina(branco, _, _, _, _, _), ListaSolucao),
 
     % % A garota que gosta de Gatos está na quarta posição.
-    % (noCanto(menina(Xs, _, _, _, _, _), ListaSolucao), 
-    % aEsquerda(menina(_, _, _, _, gatos, _), menina(Xs, _, _, _, _, _), ListaSolucao)),
-    
+    meninaPos(4, menina(_, _, _, _, gatos, _), ListaSolucao),
+
     % % A menina de Amarelo está em algum lugar entre a que gosta de Cavalos e a Giovanna, nessa ordem.
-    (aDireita(menina(amarelo, _, _, _, _, _), menina(_, _, _, _, cavalos, _), ListaSolucao),
-    aEsquerda(menina(amarelo, _, _, _, _, _), menina(_, giovana, _, _, _, _), ListaSolucao)),
+    noMeio(menina(amarelo, _, _, _, _, _), menina(_, _, _, _, cavalos, _), menina(_, giovana, _, _, _, _), ListaSolucao),
     
     % % A menina que gosta de suco de Uva está exatamente à esquerda da menina do vestido Azul.
     (aEsquerda(menina(_, _, _, _, _, uva), menina(azul, _, _, _, _, _), ListaSolucao),
@@ -105,8 +111,7 @@ solucao(ListaSolucao) :-
     aoLado(menina(amarelo, _, _, _, _, _), menina(_, _, _, _, tartarugas, _), ListaSolucao),
 
     % % Na segunda posição está a garota que gosta de suco de Limão.
-    % (noCanto(menina(Ys, _, _, _, _, _), ListaSolucao), 
-    % aDireita(menina(_, _, _, _, _, limao), menina(Ys, _, _, _, _, _), ListaSolucao)),
+    meninaPos(2, menina(_, _, _, _,_, limao), ListaSolucao),
     
     % % A garota do vestido Amarelo está em algum lugar à esquerda da que gosta de suco de Uva.
     aEsquerda(menina(amarelo, _, _, _, _, _), menina(_, _, _, _, _, uva), ListaSolucao),
@@ -131,13 +136,11 @@ solucao(ListaSolucao) :-
     aDireita(menina(_, _, olavo_bilac, _, _, _), menina(amarelo, _, _, _, _, _), ListaSolucao),
     
     % % Giovanna está em algum lugar entre quem recitará um poema de Guimarães Rosa e a Janaina, nessa ordem.
-    aDireita(menina(_, giovana, _, _, _, _), menina(_, _, guimaraes_rosa, _, _, _), ListaSolucao),
-    aEsquerda(menina(_, giovana, _, _, _, _), menina(_, janaina, _, _, _, _), ListaSolucao),
-
+    noMeio(menina(_, giovana, _, _, _, _), menina(_, _, guimaraes_rosa, _, _, _), menina(_, janaina, _, _, _, _), ListaSolucao),
+    
     % % A garota de 9 anos está em algum lugar entre a garota de 10 anos e a de 11 anos, nessa ordem.
-    aDireita(menina(_, _, _, 9, _, _), menina(_, _, _, 10, _, _), ListaSolucao),
-    aEsquerda(menina(_, _, _, 9, _, _), menina(_, _, _, 11, _, _), ListaSolucao),
- 
+    noMeio(menina(_, _, _, 9, _, _), menina(_, _, _, 10, _, _), menina(_, _, _, 11, _, _), ListaSolucao),
+    
     %Testa todas as possibilidades...
     vestido(Vestido1), vestido(Vestido2), vestido(Vestido3), vestido(Vestido4), vestido(Vestido5), 
     todosDiferentes([Vestido1, Vestido2, Vestido3, Vestido4, Vestido5]),
@@ -157,4 +160,18 @@ solucao(ListaSolucao) :-
     suco(Suco1), suco(Suco2), suco(Suco3), suco(Suco4), suco(Suco5),
     todosDiferentes([Suco1, Suco2, Suco3, Suco4, Suco5]).
 
+/*
 
+Saida:
+
+?- solucao(Lista).
+Lista = [
+            menina( branco,    luana,    guimaraes_rosa,     12,    cavalos,    manga), 
+            menina( amarelo,   marcia,   mario_de_andrade,   10,    cachorros,  limao), 
+            menina( vermelho,  giovana,  olavo_bilac,        8,     tartarugas, laranja), 
+            menina( verde,     janaina,  drumond,            9,     gatos,      uva), 
+            menina( azul,      simone,   vinicios_de_moraes, 11,    passaros,   maracuja)
+        ] ;
+false.
+
+*/
